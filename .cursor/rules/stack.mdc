@@ -1,0 +1,29 @@
+---
+name: Stack
+description: Tech stack, versions, and key config for this repo.
+tags: [documentation, overview]
+priority: 2
+appliesTo:
+  - "**/*"
+---
+
+# Tech Stack and Versions
+
+- Framework: Next.js 15.3.4 (App Router)
+- Runtime: React 19, React DOM 19
+- Language: TypeScript 5.8.3 (strict, noEmit)
+- Styling: Tailwind CSS 4 via `@tailwindcss/postcss`, `tw-animate-css`
+- UI Primitives: Radix UI (`@radix-ui/react-*`)
+- UI Patterns: shadcn-inspired (`components/ui/*`, `class-variance-authority`, `tailwind-merge`, `clsx`)
+- Icons: `lucide-react`, `@icons-pack/react-simple-icons`
+- Linting: ESLint 9, `eslint-config-next` 15.3.4 (flat config)
+- Dev Server: `next dev --turbopack`
+- Fonts: `next/font` (Inter)
+
+Key configs
+- `next.config.ts`: minimal export
+- `postcss.config.mjs`: `plugins: ["@tailwindcss/postcss"]`
+- `tsconfig.json`: bundler moduleResolution, path alias `@/*`
+
+Lockfiles present
+- `bun.lock` and `package-lock.json` exist; scripts use `next`, so `bun run dev` or `npm run dev` both work.

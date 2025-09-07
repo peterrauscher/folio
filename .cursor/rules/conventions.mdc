@@ -1,0 +1,31 @@
+---
+description: Coding, import, and styling conventions to follow in this repo.
+alwaysApply: true
+---
+
+# Conventions and Patterns
+
+Imports and aliases
+- Path alias: `@/*` → repo root (see `tsconfig.json`)
+- shadcn aliases in `components.json` (for reference): `components`, `ui`, `lib`, `hooks`
+
+Components
+- Server by default; add `"use client"` for interactive (e.g., `components/ui/avatar.tsx`, `components/ui/sheet.tsx`)
+- UI primitives wrap Radix components; style via `cva` variants and `cn`
+- Icons: prefer `lucide-react` or `@icons-pack/react-simple-icons`
+
+Styling
+- Tailwind v4 with `@tailwindcss/postcss`; import in `app/globals.css`
+- Theme via CSS variables (OKLCH) on `:root` and `.dark`; dark variant via `@custom-variant dark`
+- Base styles use `@layer base` and Tailwind tokens (e.g., `bg-background`, `text-foreground`)
+
+Routing and layout
+- App Router; global layout adds a fixed bottom `Navbar`
+- Sections on home page use IDs: `#introduction`, `#experience`
+
+Assets and media
+- Static files under `public/`; reference with `/images/...` and `next/image`
+
+Quality
+- ESLint flat config extends Next’s core-web-vitals + TypeScript
+- TypeScript strict enabled; `moduleResolution: bundler`

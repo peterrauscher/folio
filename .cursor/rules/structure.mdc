@@ -1,0 +1,34 @@
+---
+name: Structure
+description: Project layout and where things live in the repo.
+tags: [documentation, overview]
+priority: 2
+appliesTo:
+  - "**/*"
+---
+
+# Project Structure Overview
+
+Top-level
+- `app/`: App Router entrypoints, global styles, favicon
+- `components/`: Reusable UI (shadcn-style) and feature components
+- `lib/`: Utilities
+- `public/`: Static assets (images, icons)
+- Config: `next.config.ts`, `tsconfig.json`, `eslint.config.mjs`, `postcss.config.mjs`, `components.json`
+
+App directory
+- `app/layout.tsx`: Root layout, Inter font, `globals.css`, fixed bottom `Navbar`, metadata
+- `app/page.tsx`: Home page rendering `Hero` and `Timeline`
+- `app/globals.css`: Tailwind v4 imports, CSS variables (OKLCH), base layer, dark variant
+- `app/favicon.ico`: Favicon
+
+Components
+- `components/ui/*`: Radix-wrapped primitives (Button, Badge, Avatar, NavigationMenu, Sheet) using `cva` and `cn`
+- `components/navbar/*`: `NavMenu` (desktop icons), `NavigationSheet` (mobile), `index.tsx` (container)
+- `components/Hero.tsx`: Intro section with avatar, copy, external link badge
+- `components/timeline/index.tsx`: Experience timeline with badges and `next/image`
+- `components/icons/*`: Custom SVGs (e.g., LinkedIn)
+
+Lib and assets
+- `lib/utils.ts`: `cn(...inputs)` wrapper using `clsx` + `tailwind-merge`
+- `public/images/*`: Company logos and social icons used by `Timeline`
