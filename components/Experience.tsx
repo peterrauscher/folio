@@ -25,7 +25,7 @@ export default function Experience({
   href,
 }: ExperienceProps) {
   return (
-    <div className="relative ml-6 mb-4 last:mb-0">
+    <div className="relative ml-6 mb-4 last:mb-0 group">
       <div className="space-y-2">
         <div className="flex items-start justify-between gap-3">
           <div className="flex items-start gap-3 min-w-0">
@@ -40,8 +40,8 @@ export default function Experience({
                     <Image
                       src={imageSrc}
                       alt={imageAlt || header}
-                      width={50}
-                      height={50}
+                      width={128}
+                      height={128}
                       className="rounded-full object-cover"
                     />
                   ) : null}
@@ -53,8 +53,8 @@ export default function Experience({
                   <Image
                     src={imageSrc}
                     alt={imageAlt || header}
-                    width={50}
-                    height={50}
+                    width={128}
+                    height={128}
                     className="rounded-full object-cover"
                   />
                 ) : null}
@@ -82,19 +82,18 @@ export default function Experience({
             </div>
           </div>
           <div className="flex items-center gap-2 text-xs text-muted-foreground flex-shrink-0 ml-4">
-            <Calendar className="h-4 w-4" />
             <span className="whitespace-nowrap">{period}</span>
           </div>
         </div>
 
         {description && (
-          <p className="text-sm sm:text-base text-muted-foreground">
+          <p className="text-sm sm:text-base text-muted-foreground opacity-0 max-h-0 translate-y-1 overflow-hidden transition-all duration-700 ease-in-out group-hover:opacity-100 group-hover:max-h-48 group-hover:translate-y-0">
             {description}
           </p>
         )}
 
         {chips && chips.length > 0 && (
-          <div className="flex flex-wrap gap-1">
+          <div className="flex flex-wrap gap-1 opacity-0 max-h-0 translate-y-1 overflow-hidden transition-all duration-700 ease-in-out group-hover:opacity-100 group-hover:max-h-24 group-hover:translate-y-0 mt-1">
             {chips.map((c) => (
               <Badge key={c} variant="secondary" className="rounded-full">
                 {c}
