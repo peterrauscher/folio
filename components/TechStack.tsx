@@ -1,37 +1,15 @@
 "use client";
 
 import { Badge } from "@/components/ui/badge";
+import skillsData from "@/data/skills.json";
 
 type Skill = {
   name: string;
 };
 
-const DEFAULT_SKILLS: Skill[] = [
-  { name: "TypeScript" },
-  { name: "JavaScript" },
-  { name: "React" },
-  { name: "Next.js" },
-  { name: "Node.js" },
-  { name: "Python" },
-  { name: "Django" },
-  { name: "PostgreSQL" },
-  { name: "Redis" },
-  { name: "GraphQL" },
-  { name: "AWS" },
-  { name: "Docker" },
-  { name: "Kubernetes" },
-  { name: "Terraform" },
-  { name: "Tailwind CSS" },
-  { name: "Prisma" },
-  { name: "tRPC" },
-  { name: "Vite" },
-  { name: "Vitest" },
-  { name: "Playwright" },
-  { name: "Git" },
-  { name: "CI/CD" },
-];
+const DEFAULT_SKILLS: Skill[] = skillsData as Skill[];
 
-export default function Skills({
+export default function TechStack({
   skills = DEFAULT_SKILLS,
 }: {
   skills?: Skill[];

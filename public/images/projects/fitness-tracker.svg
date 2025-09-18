@@ -1,0 +1,15 @@
+<svg width="400" height="240" viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Fitness Tracker Preview</title>
+  <desc id="desc">Line chart and statistics on gradient background</desc>
+  <defs>
+    <linearGradient id="fitnessGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f97316" />
+      <stop offset="100%" stop-color="#db2777" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="240" rx="24" fill="url(#fitnessGradient)" />
+  <rect x="56" y="52" width="288" height="144" rx="18" fill="rgba(15, 23, 42, 0.72)" />
+  <polyline points="80,160 120,140 160,152 200,116 240,124 280,96 320,108" fill="none" stroke="#facc15" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+  <circle cx="200" cy="116" r="8" fill="#facc15" />
+  <circle cx="280" cy="96" r="8" fill="#facc15" />
+</svg>

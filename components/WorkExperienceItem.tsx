@@ -1,4 +1,3 @@
-import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -6,7 +5,7 @@ type ExperienceProps = {
   header: string; // Company, School, etc.
   title: string; // Role, Degree, etc.
   period: string;
-  description?: string;
+  description?: string | string[];
   chips?: string[]; // Technologies, highlights, etc.
   imageSrc?: string; // Avatar/logo path under /public
   imageAlt?: string;
@@ -18,13 +17,12 @@ export default function WorkExperienceItem({
   title,
   period,
   description,
-  chips,
   imageSrc,
   imageAlt,
   href,
 }: ExperienceProps) {
   return (
-    <div className="relative ml-3 sm:ml-6 mb-4 last:mb-0 group">
+    <div className="relative ml-3 sm:ml-6 mt-6 first:mt-0 group">
       <div className="space-y-2">
         <div className="flex gap-3">
           {href ? (
@@ -86,18 +84,18 @@ export default function WorkExperienceItem({
         </div>
 
         {description && (
-          <p className="text-sm sm:text-base text-muted-foreground opacity-0 max-h-0 translate-y-1 overflow-hidden transition-all duration-700 ease-in-out group-hover:opacity-100 group-hover:max-h-48 group-hover:mt-4 group-hover:translate-y-0">
-            {description}
-          </p>
-        )}
-
-        {chips && chips.length > 0 && (
-          <div className="flex flex-wrap gap-1 opacity-0 max-h-0 translate-y-1 overflow-hidden transition-all duration-700 ease-in-out group-hover:opacity-100 group-hover:max-h-24 group-hover:translate-y-0 mt-1">
-            {chips.map((c) => (
-              <Badge key={c} variant="secondary" className="rounded-full">
-                {c}
-              </Badge>
-            ))}
+          <div className="mt-3 text-sm sm:text-base text-muted-foreground">
+            {Array.isArray(description) ? (
+              <div className="space-y-1">
+                {description.map((point) => (
+                  <p key={point} className="m-0">
+                    {point}
+                  </p>
+                ))}
+              </div>
+            ) : (
+              <p className="m-0">{description}</p>
+            )}
           </div>
         )}
       </div>

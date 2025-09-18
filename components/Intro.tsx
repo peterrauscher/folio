@@ -45,8 +45,8 @@ export const IntroHero = () => (
           </Link>
         </Tooltip>{" "}
         desiging, building, and scaling the backend systems powering our
-        marketplace. In my free time, I like to write about software, fitness,
-        urbanism, and personal growth.
+        marketplace. In my free time I write about software, AI, personal
+        health, and self-improvement.
       </p>
     </div>
   </div>

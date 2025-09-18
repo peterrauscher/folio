@@ -1,0 +1,22 @@
+[
+  { "name": "Python" },
+  { "name": "TypeScript" },
+  { "name": "C#" },
+  { "name": "Django" },
+  { "name": "FastAPI" },
+  { "name": "React" },
+  { "name": "Redux" },
+  { "name": "Next.js" },
+  { "name": ".NET Framework" },
+  { "name": "PostgreSQL (Amazon RDS)" },
+  { "name": "Redis (AWS ElastiCache)" },
+  { "name": "Celery" },
+  { "name": "RabbitMQ (Amazon MQ)" },
+  { "name": "Kafka (Amazon MSK)" },
+  { "name": "Kubernetes (Amazon EKS)" },
+  { "name": "Terraform" },
+  { "name": "Docker" },
+  { "name": "CircleCI" },
+  { "name": "GitHub Actions" },
+  { "name": "Datadog" }
+]

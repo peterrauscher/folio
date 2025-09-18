@@ -3,9 +3,9 @@
 import Link from "next/link";
 import { useCallback, useMemo, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Home, FileText } from "lucide-react";
+import { Home, Book } from "lucide-react";
 import { SiGithub, SiX } from "@icons-pack/react-simple-icons";
-import { Linkedin } from "lucide-react";
+import { SLinkedin } from "../icons/linkedin";
 
 type DockItem = {
   key: string;
@@ -50,7 +50,7 @@ const Navbar = () => {
             className="hover:bg-transparent hover:text-inherit"
           >
             <Link href="/blog">
-              <FileText className="size-5" />
+              <Book className="size-5" />
             </Link>
           </Button>
         ),
@@ -83,7 +83,7 @@ const Navbar = () => {
             aria-label="LinkedIn"
             className="p-2 rounded-md hover:bg-transparent"
           >
-            <Linkedin className="size-5" />
+            <SLinkedin className="size-5" />
           </Link>
         ),
       },
@@ -101,6 +101,24 @@ const Navbar = () => {
           </Link>
         ),
       },
+      // {
+      //   key: "divider",
+      //   render: () => <span className="mx-1 h-5 w-px bg-border" />,
+      // },
+      // {
+      //   key: "toggle",
+      //   ariaLabel: "Toggle Theme",
+      //   render: () => (
+      //     <Button
+      //       variant="ghost"
+      //       size="sm"
+      //       aria-label="Toggle Theme"
+      //       className="hover:bg-transparent hover:text-inherit"
+      //     >
+      //       <Sun className="size-5" />
+      //     </Button>
+      //   ),
+      // },
     ],
     []
   );
@@ -136,7 +154,7 @@ const Navbar = () => {
     >
       <div
         ref={containerRef}
-        className="flex items-center justify-center gap-3 px-3 py-1"
+        className="flex items-center justify-center gap-2 px-3 py-1"
         onMouseMove={(e) => setMouseX(e.clientX)}
         onMouseLeave={() => setMouseX(null)}
       >
@@ -146,7 +164,6 @@ const Navbar = () => {
             <div
               key={item.key}
               ref={(el) => setRefAt(el, idx)}
-              // Use transform so layout doesn't shift
               style={{
                 transform: `translateZ(0) scale(${scale})`,
                 transformOrigin: "bottom center",

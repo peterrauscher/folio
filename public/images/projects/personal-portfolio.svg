@@ -1,0 +1,15 @@
+<svg width="400" height="240" viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Personal Portfolio Preview</title>
+  <desc id="desc">Abstract gradient background with window mock</desc>
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0ea5e9" />
+      <stop offset="100%" stop-color="#1d4ed8" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="240" rx="24" fill="url(#grad)" />
+  <rect x="60" y="60" width="280" height="132" rx="12" fill="rgba(15, 23, 42, 0.85)" />
+  <rect x="88" y="92" width="224" height="12" rx="6" fill="#38bdf8" />
+  <rect x="88" y="118" width="180" height="10" rx="5" fill="#bae6fd" />
+  <rect x="88" y="142" width="140" height="10" rx="5" fill="#bae6fd" />
+</svg>

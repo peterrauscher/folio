@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Personal Portfolio",
+    "description": "Static Next.js site highlighting writing, public projects, and resume content.",
+    "technologies": ["Next.js", "TypeScript", "Tailwind CSS"],
+    "image": "/images/projects/personal-portfolio.svg",
+    "url": "https://github.com/peter/folio"
+  },
+  {
+    "title": "Kitchen Display System",
+    "description": "Real-time order dashboard for restaurants with websocket updates and offline-first caching.",
+    "technologies": ["React", "Vite", "WebSockets"],
+    "image": "/images/projects/kitchen-display.svg",
+    "url": "https://github.com/peter/kds"
+  },
+  {
+    "title": "Momentum Fitness Tracker",
+    "description": "Progressive web app for workout logging, habit streaks, and wearable integrations.",
+    "technologies": ["Expo", "React Native", "Supabase"],
+    "image": "/images/projects/fitness-tracker.svg",
+    "url": "https://github.com/peter/momentum"
+  }
+]

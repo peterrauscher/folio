@@ -1,0 +1,23 @@
+<svg width="400" height="240" viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Kitchen Display Preview</title>
+  <desc id="desc">Stylized dashboard showing order tickets</desc>
+  <defs>
+    <linearGradient id="ticketGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22c55e" />
+      <stop offset="100%" stop-color="#16a34a" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="240" rx="24" fill="#052e16" />
+  <rect x="48" y="48" width="304" height="160" rx="16" fill="rgba(15, 118, 110, 0.25)" stroke="#22c55e" stroke-width="2" />
+  <g transform="translate(76 76)">
+    <rect width="96" height="112" rx="12" fill="#0f172a" />
+    <rect x="112" width="96" height="112" rx="12" fill="#0f172a" />
+    <rect x="224" width="96" height="112" rx="12" fill="#0f172a" />
+    <rect width="96" height="24" rx="12" fill="url(#ticketGradient)" />
+    <rect x="112" width="96" height="24" rx="12" fill="url(#ticketGradient)" />
+    <rect x="224" width="96" height="24" rx="12" fill="url(#ticketGradient)" />
+    <rect y="36" width="68" height="12" rx="6" fill="#22d3ee" />
+    <rect x="112" y="36" width="68" height="12" rx="6" fill="#22d3ee" />
+    <rect x="224" y="36" width="68" height="12" rx="6" fill="#22d3ee" />
+  </g>
+</svg>

@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Software Engineer",
+    "company": "Perpay",
+    "url": "https://www.perpay.com",
+    "period": "April 2024 - Present",
+    "description": "Built, improved, and maintained the storefront powered by your paycheck."
+  },
+  {
+    "title": "Software Engineer",
+    "company": "Almo Corporation",
+    "url": "https://www.almo.com",
+    "period": "July 2023 - April 2024",
+    "description": "Developed a C# EDI library and tailored integrations so our retail partners onboard without friction."
+  },
+  {
+    "title": "Software Engineer Intern",
+    "company": "Almo Corporation",
+    "url": "https://www.almo.com",
+    "period": "June 2018 - August 2019",
+    "description": "Designed some dashboards and an inventory API so vendors could plug in quickly."
+  }
+]

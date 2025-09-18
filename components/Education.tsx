@@ -1,5 +1,5 @@
 import Experience from "@/components/WorkExperienceItem";
-import data from "@/lib/education.json";
+import data from "@/data/education.json";
 
 type EducationItem = {
   school: string;
