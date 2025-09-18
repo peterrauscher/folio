@@ -1,4 +1,4 @@
-import Experience from "@/components/Experience";
+import Experience from "@/components/WorkExperienceItem";
 import data from "@/lib/education.json";
 
 type EducationItem = {
@@ -14,7 +14,7 @@ const education = data as EducationItem[];
 
 export default function Education() {
   return (
-    <div className="max-w-screen-md mx-auto px-3 md:px-6">
+    <div className="max-w-screen-md mx-auto mt-6">
       <h2 className="text-2xl font-bold mb-4">Education</h2>
       <div className="relative">
         <div className="absolute left-0 inset-y-0 border-l-1" />

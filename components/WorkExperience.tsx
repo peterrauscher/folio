@@ -1,4 +1,4 @@
-import Experience from "@/components/Experience";
+import Experience from "@/components/WorkExperienceItem";
 
 const experiences = [
   {
@@ -11,6 +11,7 @@ const experiences = [
     technologies: [
       "Python",
       "Django",
+      "TypeScript",
       "React",
       "AWS",
       "Kubernetes",
@@ -39,13 +40,16 @@ const experiences = [
 
 export default function WorkExperience() {
   return (
-    <div className="max-w-screen-md mx-auto py-6 md:py-8 px-2 md:px-4">
+    <div className="max-w-screen-md mx-auto mt-6">
       <h2 className="text-2xl font-bold mb-4">Work Experience</h2>
       <div className="relative">
         {/* Timeline line */}
         <div className="absolute left-0 inset-y-0 border-l-1" />
         {experiences.map(
-          ({ company, description, period, title, technologies, url }, index) => (
+          (
+            { company, description, period, title, technologies, url },
+            index
+          ) => (
             <Experience
               key={index}
               header={company}
