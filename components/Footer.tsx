@@ -23,13 +23,11 @@ const LINKS = [
 
 export default function Footer() {
   return (
-    <footer className="my-6 px-4">
-      <div className="mx-auto max-w-screen-md">
+    <footer className="my-10 px-4">
+      <div className="mx-auto max-w-screen-md space-y-6">
         <hr className="border-border" />
-        <div className="mt-6 flex flex-wrap items-center justify-between gap-4 sm:flex-nowrap">
-          <p className="text-sm text-muted-foreground">
-            Curious what I&apos;m listening to?
-          </p>
+        <div className="flex flex-wrap items-center justify-between gap-4">
+          <p className="text-sm text-muted-foreground">Consume what I consume.</p>
           <div className="flex items-center gap-4">
             {LINKS.map(({ href, label, icon: Icon }) => (
               <Link

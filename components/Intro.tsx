@@ -7,14 +7,14 @@ export const IntroHero = () => (
   <div className="max-w-screen-md mx-auto">
     <div className="flex justify-between gap-2 md:gap-4">
       <div className="flex flex-col flex-1 space-y-2">
-        <h1 className="text-4xl sm:text-5xl xl:text-6xl font-bold">
+        <h1 className="text-4xl sm:text-5xl xl:text-6xl font-bold tracking-tighter">
           <span className="whitespace-nowrap">Hey, I&apos;m</span>
           <wbr />
-          <span> Peter 👋</span>
+          <span> Peter 🤙</span>
         </h1>
         <p className="md:text-xl text-lg max-w-[600px]">
-          Software engineer working at the intersection of e-commerce and
-          finance. Learning, building, and progressing daily.
+          I&apos;m a software engineer working at the intersection of e-commerce
+          and finance. Learning, building, and progressing daily.
         </p>
       </div>
 

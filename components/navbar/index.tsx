@@ -6,11 +6,13 @@ import { Button } from "@/components/ui/button";
 import { Home, Book } from "lucide-react";
 import { SiGithub, SiX } from "@icons-pack/react-simple-icons";
 import { SLinkedin } from "../icons/linkedin";
+import ThemeToggle from "@/components/ThemeToggle";
 
 type DockItem = {
   key: string;
   render: () => JSX.Element;
   ariaLabel?: string;
+  isDivider?: boolean;
 };
 
 const Navbar = () => {
@@ -56,7 +58,8 @@ const Navbar = () => {
         ),
       },
       {
-        key: "divider",
+        key: "divider-0",
+        isDivider: true,
         render: () => <span className="mx-1 h-5 w-px bg-border" />,
       },
       {
@@ -101,6 +104,16 @@ const Navbar = () => {
           </Link>
         ),
       },
+      {
+        key: "divider-1",
+        isDivider: true,
+        render: () => <span className="mx-1 h-5 w-px bg-border" />,
+      },
+      {
+        key: "toggle",
+        ariaLabel: "Toggle theme",
+        render: () => <ThemeToggle />,
+      },
       // {
       //   key: "divider",
       //   render: () => <span className="mx-1 h-5 w-px bg-border" />,
@@ -130,7 +143,7 @@ const Navbar = () => {
   const getScaleForIndex = useCallback(
     (idx: number) => {
       // Do not magnify the divider
-      if (items[idx]?.key === "divider") return 1;
+      if (items[idx]?.isDivider) return 1;
 
       if (mouseX == null) return 1;
       const el = itemRefs.current[idx];
@@ -171,7 +184,7 @@ const Navbar = () => {
                 willChange: "transform",
               }}
               className={
-                item.key === "divider"
+                item.isDivider
                   ? "mx-1 h-5 w-px bg-border"
                   : "inline-flex items-center justify-center"
               }
